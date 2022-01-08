@@ -15,4 +15,3 @@ Python es un lenguaje de programación muy utilizado y tiene a disposición gran
 Los primeros capítulos de este libro están destinados para la definición de conceptos fundamentales del lenguaje de programación, la presentación de las diferentes estructuras de datos y la introducción a la programación funcional en Python. Este conjunto de capítulos podría definirse como la primera parte del libro. Después de adquirir las bases nos concentramos en la programación orientada a objetos y otros conceptos considerados de mayor complejidad, por lo que se recomienda seguir el orden establecido.
 
 Los problemas que se presenten tendrán relación directa con el tema que se esté tratando, sin embargo, en la medida que se avance en el libro se incluyen conceptos explicados en capítulos o secciones anteriores, esto ayudará al estudiante a recordar conceptos anteriores y mantener el incremento de complejidad manejable.
-
