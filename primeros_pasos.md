@@ -12,14 +12,99 @@ print("Hello World")
 ```
 
 <!-- Sección 1 -->
-## Dando formato a las cadenas en Python.
+## Un hola mundo dinámico.
 
-Finalmente hemos cumplido con la tradición, hemos mostrado un mensaje de "Hola Mundo" en nuestra pantalla. Ahora que hemos iniciado "formalmente" nuestro camino por el mundo de Python, en el resto del capítulo vamos a profundizar en otras formas de mostrar información en pantalla usando la función `print()`, pero primero, veamos otra función interesante que nos permitirá recibir información desde el exterior, la sintaxis de está función es:
+Finalmente hemos cumplido con la tradición, se ha mostrado un mensaje de "Hola Mundo" en nuestra pantalla. Ahora que hemos iniciado "formalmente" nuestro camino por el mundo de Python, en el resto del capítulo vamos a profundizar en otras formas de mostrar información en pantalla usando la función `print()`, pero primero, veamos otra función interesante que nos permitirá recibir información desde el exterior, la sintaxis de está función es:
 
 ```python
 input("message")
 ```
 
-La función `input()` al igual que la función `print()` se encuentra predefinida en el ambiente de Python, por lo que podemos usarla sin problemas. El argumento que recibe la función es un `string` que se muestra en consola a modo de mensaje antes de introducir la entrada. Además, esta función retorna un `string` que representa la entrada recibida por teclado. Esto es, cualquier cantidad de información introducida antes de presionar la tecla `return`
+La función `input()`, al igual que la función `print()`, se encuentra predefinida en el ambiente de Python, por lo que podemos usarla sin problemas. El argumento que recibe la función es un `string` que se muestra en consola a modo de mensaje antes de introducir la entrada. Por último, esta función retorna un `string` que representa la entrada recibida por teclado. Esto es, cualquier información introducida antes de presionar la tecla `return`. Las siguientes líneas de código actualizan nuestro programa para escribir un saludo hacía nosotros mismos.
 
- 
+```python
+print("Hello world")
+name = input("Introduce your name: ")
+print("Hello ", name)
+```
+
+Después de imprimir el mensaje "Hello world" el programa tiene dos líneas adicionales. El código anterior genera la siguiente salida.
+
+```bash
+Hello world
+Introduce your name: John
+Hello John
+```
+
+Las dos sentencias adicionales en nuestro programa realiza varias cosas, vamos a explicar cada una de ellas por separado.
+
+```python
+name = input("Introduce your name: ")
+```
+
+La sentencia anterior, como se mencionó anteriormente, utiliza una función predefinida `input(message)` que muestra un mensaje en forma de string justo antes de introducir información por teclado. Luego de presionar la tecla `return` la función devuelve el mensaje escrito por teclado para ser almacenado en la variable name.
+
+## Variables en Python
+
+Hasta ahora se han hablado de funciones predefinidas de Python, esto se ha hecho de forma muy general, exceptuando el capítulo correspondiente a funciones donde abordaremos con profundidad este tema. Sin embargo, por su importancia es necesario explicar formalmente el concepto de variable en programación
+
+Las variables en cualquier lenguaje de programación sirven como punteros a espacios en la memoria del computador donde podemos almacenar información, a esta información se le conoce también como datos, estos datos pueden ser strings, números, booleanos (verdadero y falso) etc. Además, también podemos almacenar estructuras de datos. Todo esto será detallado en los capítulos siguientes.
+
+<span style="background-color:red">Hacer gráfico que represente el concepto de variable</span>
+
+Al tener un puntero hacía el espacio en memoria en el que se encuentra un dato en particular, podemos acceder a esta información en otras líneas de código de forma conveniente. Basta sólo con usar el nombre de la variable para acceder al dato al que está hace referencia, en el ejemplo anterior, el nombre de la variable es `name`
+
+```python
+print("Hello ", name)
+```
+
+Finalmente, la sentencia anterior recibe dos argumentos, esto es porque la función `print()` puede recibir un número variable de argumentos, todos separados por coma. En este caso, recibe el mensaje "Hello ", y la variable name que permitirá acceder a la información a la cual esta variable apunta.
+
+## ¿Por qué el nombre de variable?
+
+Quizás en estos momentos te preguntes, la razón del nombre variable, esto es porque la información a la que estas variables apuntan pueden variar a lo largo de la ejecución de un programa. Por ejemplo, veamos el siguiente programa:
+
+```python
+age = input("Escribe tu edad: ")
+print("Tu edad es: ",age)
+age = 100
+print("Tu edad es: ",age)
+age = "Esto debería ser un número"
+print("Tu edad es: ",age)
+```
+
+En el programa anterior el dato al que hace referencia la variable `age` cambia en tres oportunidades, la primera vez se almacena la edad introducida con la función `input()` Luego esta se establece en 100 y finalmente almacena un string. 
+
+## Tipado dinámico.
+
+A diferencia de otros lenguajes de programación, una de las características de Python, es que se trata de un lenguaje de tipado dinámico, esto quiere decir, que no necesitamos definir el tipo de dato que la variable hace referencia, en el ejemplo anterior, el dato al que hace referencia la variable `age` no sólo cambia de valor, si no que además cambia de tipo, ya que la primera vez que la variable `age` es usada, recibe la salida de la función `input()` que será un string incluso si el dato introducido es un número, luego, la `age` almacena el número 100, para terminar con un nuevo string.
+
+Para observar esto con más claridad, vamos a usar la función predefinida `type()` esta función indica el tipo de dato de la variable que se pasa como argumento, modifiquemos un poco el programa anterior para observar el cambio en el tipo de dato.
+
+```python
+age = input("Escribe tu edad: ")
+type(age)
+age = 100
+type(age)
+age = "Esto debería ser un número"
+type(age)
+```
+Para mayor claridad, se elimina la función `print()`, de tal forma que sólo observaremos la variación del tipo de dato.
+
+```python
+<class 'str'>
+<class 'int'>
+<class 'str'>
+```
+
+Por ahora concentremos en la parte donde se indica el tipo de dato, y olvidemos por un momento la palabra reservada `class` que básicamente nos indica que estamos manipulando objetos, esto se trata con más detalle en el capítulo correspondiente a clases y objetos. Vemos que durante la ejecución del programa el tipo de dato al que hace referencia la variable `age` cambia tanto de valor como de tipo. 
+
+El tipado dinámico puede ser una ventaja, ya que nos brinda mayor flexibilidad a la hora de escribir código, sin embargo, es importante destacar que esta podría ser una fuente considerable de errores, por lo que se debe tener claridad acerca del tipo de dato que manejarán las variables a la hora de escribir código Python.
+
+## Convenciones para escribir variables.
+
+## Sentencias en Python
+
+## Ejercicios
+
+
