@@ -3,7 +3,7 @@
 
 Al iniciar el proceso de aprendizaje de cualquier lenguaje de programación, existe una actividad que puede ser considerada una tradición, ésta consiste en imprimir en pantalla el mensaje "Hola mundo", o "Hello World" en inglés. En aras de mantener la tradicion comenzaremos explorando las diferentes maneras que tenemos para mostrar información por pantalla. 
 
-En Python existe una gran variedad de funciones que pueden ser utilizadas sin la necesidad de definirlas. La primera función que usaremos será la función `print()`. Esta función imprime en pantalla un mensaje, el mensaje puede ser un string o cualquier otro objeto. El objeto será transformado en un string antes de ser escrito en pantalla. 
+En Python existe una gran variedad de funciones que pueden ser utilizadas sin la necesidad de definirlas. La primera función que usaremos será `print()`. Esta función imprime en pantalla un mensaje, el mensaje puede ser un string o cualquier otro objeto. El objeto será transformado en un string antes de ser escrito en pantalla. 
 
 Más adelante profundizaremos acerca de los tipos de datos como strings y objetos en Python, por ahora, para efectos prácticos, un string representa datos de tipo texto. Ahora bien, ya estamos listos para imprimir el mensaje de inicio, para ello escribimos la siguiente línea de código.
 
@@ -20,7 +20,7 @@ Finalmente hemos cumplido con la tradición, se ha mostrado un mensaje de "Hola 
 input("message")
 ```
 
-La función `input()`, al igual que la función `print()`, se encuentra predefinida en el ambiente de Python, por lo que podemos usarla sin problemas. El argumento que recibe la función es un `string` que se muestra en consola a modo de mensaje antes de introducir la entrada. Por último, esta función retorna un `string` que representa la entrada recibida por teclado. Esto es, cualquier información introducida antes de presionar la tecla `return`. Las siguientes líneas de código actualizan nuestro programa para escribir un saludo hacía nosotros mismos.
+La función `input()`, al igual que la función `print()`, se encuentra predefinida en el ambiente de Python, por lo que podemos usarla preocuparnos por su definición. El argumento que recibe la función es un `string` que se muestra en consola a modo de mensaje antes de introducir la entrada. Por último, esta función retorna un `string` que representa la entrada recibida por teclado. Esto es, cualquier información introducida antes de presionar la tecla `return`. Las siguientes líneas de código actualizan nuestro programa para escribir un saludo personalizado.
 
 ```python
 print("Hello world")
@@ -42,11 +42,11 @@ Las dos sentencias adicionales en nuestro programa realiza varias cosas, vamos a
 name = input("Introduce your name: ")
 ```
 
-La sentencia anterior, como se mencionó anteriormente, utiliza una función predefinida `input(message)` que muestra un mensaje en forma de string justo antes de introducir información por teclado. Luego de presionar la tecla `return` la función devuelve el mensaje escrito por teclado para ser almacenado en la variable name.
+La sentencia anterior, como se mencionó anteriormente, utiliza una función predefinida `input(message)` que muestra un mensaje en forma de string justo antes de introducir información por teclado. Luego de presionar la tecla `return` la función devuelve el mensaje escrito por teclado para ser almacenado en la variable `name`.
 
 ## Variables en Python
 
-Hasta ahora se han hablado de funciones predefinidas de Python, esto se ha hecho de forma muy general, exceptuando el capítulo correspondiente a funciones donde abordaremos con profundidad este tema. Sin embargo, por su importancia es necesario explicar formalmente el concepto de variable en programación
+Debido a su importancia, es necesario explicar formalmente el concepto de variable en programación
 
 Las variables en cualquier lenguaje de programación sirven como punteros a espacios en la memoria del computador donde podemos almacenar información, a esta información se le conoce también como datos, estos datos pueden ser strings, números, booleanos (verdadero y falso) etc. Además, también podemos almacenar estructuras de datos. Todo esto será detallado en los capítulos siguientes.
 
@@ -62,7 +62,7 @@ Finalmente, la sentencia anterior recibe dos argumentos, esto es porque la funci
 
 ## ¿Por qué el nombre de variable?
 
-Quizás en estos momentos te preguntes, la razón del nombre variable, esto es porque la información a la que estas variables apuntan pueden variar a lo largo de la ejecución de un programa. Por ejemplo, veamos el siguiente programa:
+Quizás en estos momentos te preguntes la razón del nombre variable, esto es porque la información a la que estas variables apuntan pueden variar a lo largo de la ejecución de un programa. Por ejemplo, veamos el siguiente programa:
 
 ```python
 age = input("Escribe tu edad: ")
@@ -102,6 +102,76 @@ Por ahora concentremos en la parte donde se indica el tipo de dato, y olvidemos 
 El tipado dinámico puede ser una ventaja, ya que nos brinda mayor flexibilidad a la hora de escribir código, sin embargo, es importante destacar que esta podría ser una fuente considerable de errores, por lo que se debe tener claridad acerca del tipo de dato que manejarán las variables a la hora de escribir código Python.
 
 ## Convenciones para escribir variables.
+
+Cada lenguaje de programación tiene su caracterísitcas propias que lo diferencian de otros lenguajes, estas diferencias pueden ser inherentes a la forma en la que dicho lenguaje está definido, otras características se han establecido no por las restricciones del lenguaje si no por conveniencia, y en muchas ocasiones por estilo. Veamos algunas de los estilos más populares que podemos encontrar para escribir el nombre de las variables.
+
+### Camel Case
+
+Usando este estilo, las palabras no se separan con espacios o signos de puntuación, en su lugar, la separación de las palabras se hace escribiendo la primera letra en mayúscula, por ejemplo:
+
+```
+programmingIsEasy
+```
+
+La variación con la primera letra en mayúscula también es aceptada.
+
+```
+ProgrammingIsEasy
+```
+<div style="background-color:red">
+    <h1>Mencionar el origen del nombre Camel Case</h1>
+</div>
+
+
+### Snake Case
+
+Si hacemos uso del estilo `snake case`, en este caso las palabras se separan por un guión bajo ( _ ) en lugar del espacio. El ejemplo anterior con el estilo `snake case` quedaría de la siguiente forma.
+
+```
+programming_is_easy
+```
+
+Ahora bien, en este libro estamos interesados en Python, así que haremos uso de las convenciones establecidas para escribir código haciendo uso de este lenguaje de programación. Para escribir variables en Python debemos hacer uso del estilo `snake case`, específicamente podemos nombrar algunas reglas que se deben tomar en cuenta a la hora de escribir nombres de variables en Python.
+
+* Debe ser todo en minúscula
+* Además, el nombre debe ser descriptivo, es decir, evitar nombres como a, b, o x para variables. En este sentido, lo que se busca es tener una idea de lo que representa la variable con sólo leer el nombre.
+* Si el nombre de la variable está formado por más de una palabra, estas deben ir separadas por un guión bajo, haciendo uso del estilo `snake case`.
+
+El último punto es importante ya que en Python, así como en la mayoría de los lenguajes de programación, el espacio es usdado como separador, o para indicar que algo ha terminado. Por ejemplo, si intentamos declarar una variable de la siguiente forma:
+
+```python
+last name = "my last name"
+```
+
+Python arrojará un error de sintaxis, pues no cumple con las especificaciones del lenguaje para declarar una variable.
+
+Un aspecto importante de las convenciones es que se crearon para facilitar la lectura y escritura de código, de tal forma que la lectura del código de forma fluida y coherente, pero en muchos casos no tiene nada que ver con el comportamiento del lenguaje. Veamos por ejemplo, el siguiente programa.
+
+```python
+a = 3
+b = 4
+c = 0.5 * a * b
+
+print(c)
+```
+El código anterior describe una serie de operaciones aritméticas, que no representan mayor problema para seguir, sin embargo, es difícil determinar la naturaleza de la operación, hasta ahora son sólo operaciones sin ningún significado aparente, ahora veamos el mismo código escrito haciendo uso de las convenciones descritas anteriormente.
+
+```python
+base = 3
+altura = 4
+area_triangulo = 0.5 * base * altura 
+print(area_triangulo)
+```
+
+En este caso, para la mayoría de los lectores será evidente que trata de hacer el las líneas de códigos anteriormente. Se trata simplemente del cálculo del área de un triángulo. Este ejemplo es en extremo sencillo, sin embargo, estoy seguro que para la mayoría la segunda forma facilita la interpretación del código, ahora imaginemos que los cálculos que se intentan hacer son más complejos, imaginen como será de complicado para el programador que escribe el código o cualquier otro que tenga acceso al código, leer ecuaciones o problemas más complejos con variables nombradas como a, b, c, x, y, c, etc.
+
+Por último, Python no tendría problemas en identificar una variable nombrada usando el estilo `camel case`, por ejemplo:
+
+```python
+lastName = "my last name"
+```
+La línea anterior creará exitosamente una variable llamada `lastName`, sin embargo, el estilo utilizado para crearla no será el correcto, por lo que se estará incurriendo en una mala práctica de escritura de código en Python.
+
 
 ## Sentencias en Python
 
