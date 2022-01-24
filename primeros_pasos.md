@@ -50,7 +50,9 @@ Debido a su importancia, es necesario explicar formalmente el concepto de variab
 
 Las variables en cualquier lenguaje de programación sirven como punteros a espacios en la memoria del computador donde podemos almacenar información, a esta información se le conoce también como datos, estos datos pueden ser strings, números, booleanos (verdadero y falso) etc. Además, también podemos almacenar estructuras de datos. Todo esto será detallado en los capítulos siguientes.
 
-<span style="background-color:red">Hacer gráfico que represente el concepto de variable</span>
+<div style="background-color:red">
+    <h3>Hacer gráfico que represente el concepto de variable</h3>
+</div>
 
 Al tener un puntero hacía el espacio en memoria en el que se encuentra un dato en particular, podemos acceder a esta información en otras líneas de código de forma conveniente. Basta sólo con usar el nombre de la variable para acceder al dato al que está hace referencia, en el ejemplo anterior, el nombre de la variable es `name`
 
@@ -119,7 +121,7 @@ La variación con la primera letra en mayúscula también es aceptada.
 ProgrammingIsEasy
 ```
 <div style="background-color:red">
-    <h1>Mencionar el origen del nombre Camel Case</h1>
+    <h3>Mencionar el origen del nombre Camel Case</h3>
 </div>
 
 
